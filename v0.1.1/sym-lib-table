@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "PATCH_sym")(type "KiCad")(uri "${KIPRJMOD}/PATCH_sym.kicad_sym")(options "")(descr ""))
+  (lib (name "PATCH_sym_2")(type "KiCad")(uri "${KIPRJMOD}/PATCH_sym_2.kicad_sym")(options "")(descr ""))
+)
