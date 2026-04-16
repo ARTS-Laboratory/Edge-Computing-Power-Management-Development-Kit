@@ -298,7 +298,7 @@
 		(uuid "08b090a8-687c-4c16-98e7-fd46626928b2")
 		(at 212.1975 87 180)
 		(property "Reference" "Battery"
-			(at 0 -4.5 0)
+			(at -5.0025 -14 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "d345cd04-c5a6-4307-a30a-1c26ded663c2")
