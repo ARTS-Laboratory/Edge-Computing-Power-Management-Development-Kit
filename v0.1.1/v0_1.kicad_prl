@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 0,
+    "active_layer": 5,
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
@@ -41,7 +41,6 @@
       "tracks",
       "drawing_sheet",
       "pads",
-      "zones",
       "drc_exclusions",
       "locked_item_shadows",
       "conflict_shadows",
