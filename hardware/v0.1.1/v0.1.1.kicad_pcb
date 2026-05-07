@@ -10530,7 +10530,7 @@
 			)
 		)
 	)
-	(gr_text "Edge Computing Power \nManagement Development Kit\n"
+	(gr_text "Edge Computing Power \nManagement Development Kit\nv0.1.1\n"
 		(at 212.5 143.4 0)
 		(layer "F.SilkS")
 		(uuid "cf287088-c0aa-4769-a585-4cfad5e37325")
