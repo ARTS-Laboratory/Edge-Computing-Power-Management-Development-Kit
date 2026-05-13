@@ -697,7 +697,7 @@
 		(descr "SMD pad as test Point, diameter 2.5mm")
 		(tags "test point SMD pad")
 		(property "Reference" "SWDIO"
-			(at -2.5 0 180)
+			(at -2.5 0 0)
 			(layer "F.SilkS")
 			(uuid "b3e6f821-2935-41ff-9da8-076415b0a625")
 			(effects
