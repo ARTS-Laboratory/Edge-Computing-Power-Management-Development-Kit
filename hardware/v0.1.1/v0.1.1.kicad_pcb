@@ -452,7 +452,7 @@
 		(descr "SMD pad as test Point, diameter 2.5mm")
 		(tags "test point SMD pad")
 		(property "Reference" "SWCLK"
-			(at 2.75 0 180)
+			(at 2.75 0 0)
 			(layer "F.SilkS")
 			(uuid "0b3fceb7-2327-4cc9-860c-902cbd691a19")
 			(effects
