@@ -1,0 +1,102 @@
+(footprint "Battery"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -8 4 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "d7df4f71-d9d8-4265-bd83-515c169d8b0b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Battery"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "94214786-fe86-42c1-a5ce-6ff57a315931")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.mouser.com/datasheet/3/201/1/3000.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b791836e-aed8-485b-9061-bb6947d7450f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Keystone 300: Coin Cell Battery Holders SM COIN CELL BH 12mm"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4c0e68f9-188f-42ec-94ac-cfb8ea64a9e5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -10 -3)
+		(end 10 3)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "d034a034-f90f-4f65-8b74-a35afa359858")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "e0f991fb-20dd-4125-a76b-f7ff37dcde27")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at 0 0)
+		(size 4.1 4.1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(uuid "ceccc38f-626c-4cb6-9373-5feb0b39d341")
+	)
+	(pad "2" smd roundrect
+		(at 7.86 0)
+		(size 3.3 3.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(uuid "5f416dda-623c-4289-8d7a-025e8077cad7")
+	)
+	(pad "3" smd roundrect
+		(at -7.86 0)
+		(size 3.3 3.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(uuid "6c7c69d1-445c-4a56-9ec5-62ad6cc46162")
+	)
+	(embedded_fonts no)
+)
