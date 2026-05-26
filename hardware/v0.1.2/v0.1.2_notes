@@ -1,0 +1,39 @@
+HDK v0.1.2
+
+
+ITEM ONE
+Component Swaps:
+
+Accelerometer			Teriffs
+MicroSD Card Reader		Lead times 
+RTC 				No Longer Manufactured
+
+For these component swaps, check what Asif.
+
+
+
+ITEM TWO
+Measurement Pads:
+
+1. Where do we want measurement pads? Next to each device.
+2. No daisy training, right? Everything must break off at exact same time.
+3. How do we want to do the pads? Dimensions? Do we want to do JST connectors?
+
+
+
+ITEM THREE
+MicroSD Card:
+
+The MicroSD card reader does not need the resistors that Asif gave it, as those resistors just acted as voltage dividers because the Arduino uses 5V logic.
+
+I will need to confirm pin functions and re-wire everything in the schematic.
+
+
+
+ITEM FOUR
+Accelerometer
+
+
+
+
+	
