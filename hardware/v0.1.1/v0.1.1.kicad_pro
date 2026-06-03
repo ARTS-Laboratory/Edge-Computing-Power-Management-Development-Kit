@@ -673,7 +673,7 @@
       {
         "filename": "v0.1.1.kicad_sch",
         "name": "v0.1.1",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "7a79fc3a-eeb6-4250-8945-98f32aee51db"
       }
     ],
     "used_designators": "",
@@ -682,7 +682,7 @@
   "sheets": [
     [
       "7a79fc3a-eeb6-4250-8945-98f32aee51db",
-      "Root"
+      "v0.1.1"
     ],
     [
       "1d65f6b7-6fff-4119-b784-9bbaa5726a6f",
