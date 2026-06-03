@@ -2,30 +2,48 @@
 # Archives
 # =========================
 *.zip
+*.7z
+*.tar
+*.gz
 
 # =========================
-# KiCad cache files
+# KiCad generated/cache files
 # =========================
 fp-cache
 fp-info-cache
+*-cache.lib
+*.net
 
 # =========================
-# KiCad backups & autosaves
+# KiCad backups/autosaves
 # =========================
 *.bak
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*-backups/
+#auto_saved_files#
 *-autosave.kicad_sch
 *-autosave.kicad_pcb
 
 # =========================
-# KiCad user-specific settings
+# KiCad user/local state
 # =========================
 *.kicad_prl
+*.lck
 
 # =========================
-# KiCad temp / lock files
+# Local history / editor history
 # =========================
-*.lck
+.history/
+**/.history/
+
+# =========================
+# Temporary files
+# =========================
 *.tmp
+*.swp
+*.swo
+*~
 
 # =========================
 # OS junk
@@ -34,7 +52,7 @@ fp-info-cache
 Thumbs.db
 
 # =========================
-# Visual Micro / Arduino IDE temp files
+# Visual Studio / Arduino temp
 # =========================
 __vm/
 *.vmps.xml
@@ -46,4 +64,3 @@ __vm/
 ~$*.doc*
 ~$*.xls*
 ~$*.ppt*
-hardware/v0.1.2/.history/
