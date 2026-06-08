@@ -4,7 +4,7 @@ SAMDTimer ITimer0(TIMER_TC3);
 
 
 #define ENABLE_DEDICATED_SPI 1
-#define USE_SPI_ARRAY_TRANSFER 3
+#define USE_SPI_ARRAY_TRANSFER 0
 #define MAINTAIN_FREE_CLUSTER_COUNT 1
 
 // USE 512 byte write buffers if possible for optimal performance!
@@ -205,6 +205,7 @@ void setup() {
       delay(100);                  // Wait for 100 milliseconds
     }
   }
+  analogWriteResolution(10);
   analogWrite(PPGVolt, 839);  // Set LED to 2.7V to measure 'PPG' or Heart rate
 
   // Check if USB is connected, if so go full CPU speed
