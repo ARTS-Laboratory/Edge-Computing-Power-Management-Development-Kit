@@ -1,0 +1,8 @@
+Comment ,Designator,Footprint
+1uF,"C1,C2,C5",Capacitor_SMD:C_0805_2012Metric
+100nF,"C3,C4,C6",Capacitor_SMD:C_0805_2012Metric
+Conn_01x08_Pin,J1,Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical
+10k,"R1,R2,R3,R4",Resistor_SMD:R_0805_2012Metric
+AS5F18G04SND-10LIN,U1,Breakout:SON127P600X800X80-8N
+TXB0106PW,U2,Package_SO:TSSOP-16_4.4x5mm_P0.65mm
+AP2127K-1.8,U3,Package_TO_SOT_SMD:SOT-23-5
