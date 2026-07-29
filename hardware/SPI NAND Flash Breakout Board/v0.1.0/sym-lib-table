@@ -1,6 +1,4 @@
 (sym_lib_table
 	(version 7)
-	(lib (name "SPINAND") (type "KiCad") (uri "${KIPRJMOD}/SPINAND.kicad_sym") (options "") (descr ""))
-	(lib (name "breakout_board") (type "KiCad") (uri "${KIPRJMOD}/breakout_board.kicad_sym") (options "") (descr ""))
-	(lib (name "AS5F18G04SND-10LIN") (type "KiCad") (uri "${KIPRJMOD}/AS5F18G04SND-10LIN.kicad_sym") (options "") (descr ""))
+	(lib (name "AS5F18G04SND-10LIN") (type "KiCad") (uri "${KICAD10_SYMBOL_DIR}/AS5F18G04SND-10LIN.kicad_sym") (options "") (descr ""))
 )
