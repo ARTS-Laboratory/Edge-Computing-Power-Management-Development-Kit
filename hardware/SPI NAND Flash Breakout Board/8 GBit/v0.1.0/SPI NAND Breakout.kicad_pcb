@@ -4687,7 +4687,19 @@
 		(layer "Edge.Cuts")
 		(uuid "ea59617e-7282-479c-b328-a9a3fee1d7a5")
 	)
-	(gr_text "Flash: AS5F18G04SND-10LIN"
+	(gr_text "8 Gb"
+		(at 171.997567 98.635127 0)
+		(layer "B.SilkS")
+		(uuid "cff39c23-3e92-4ad2-a46f-b9fd6ee1db48")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.08)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "v0.1.0"
 		(at 172 99.3 0)
 		(layer "B.SilkS")
 		(uuid "95e40555-c390-4bfe-ae9c-41eb9c8002c7")
