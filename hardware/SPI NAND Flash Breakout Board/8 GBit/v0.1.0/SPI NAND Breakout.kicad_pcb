@@ -4711,7 +4711,7 @@
 			(justify left bottom mirror)
 		)
 	)
-	(gr_text "Flash: AS5F18G04SND-10LIN"
+	(gr_text "SPI NAND: AS5F18G04SND-10LIN"
 		(at 172 100 0)
 		(layer "B.SilkS")
 		(uuid "22477474-7937-44b1-a00a-b2ca387a1faa")
@@ -4723,21 +4723,8 @@
 			(justify left bottom mirror)
 		)
 	)
-	(gr_text "CS#"
-		(at 157.939721 83.970852 0)
-		(layer "B.SilkS")
-		(uuid "5e799713-a44f-48d4-a65b-8c0b5904b9bf")
-		(effects
-			(font
-				(size 1.5 1.5)
-				(thickness 0.3)
-				(bold yes)
-			)
-			(justify left bottom mirror)
-		)
-	)
 	(gr_text "GND"
-		(at 158.032521 99.182322 0)
+		(at 157.832521 99.182322 0)
 		(layer "B.SilkS")
 		(uuid "0172849f-d3ee-4a79-825e-6508fa3d1347")
 		(effects
@@ -4749,23 +4736,10 @@
 			(justify left bottom mirror)
 		)
 	)
-	(gr_text "IO 1"
-		(at 158.232521 86.482322 0)
+	(gr_text "CS#"
+		(at 157.839721 83.970852 0)
 		(layer "B.SilkS")
-		(uuid "2e0663ea-cf48-4b76-91a3-bdbf555572e7")
-		(effects
-			(font
-				(size 1.5 1.5)
-				(thickness 0.3)
-				(bold yes)
-			)
-			(justify left bottom mirror)
-		)
-	)
-	(gr_text "IO 0"
-		(at 158.332521 91.582322 0)
-		(layer "B.SilkS")
-		(uuid "d067a8ff-b70f-4341-b179-e1d860799830")
+		(uuid "5e799713-a44f-48d4-a65b-8c0b5904b9bf")
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -4776,7 +4750,7 @@
 		)
 	)
 	(gr_text "3.3V"
-		(at 158.432521 81.482322 0)
+		(at 158.332521 81.482322 0)
 		(layer "B.SilkS")
 		(uuid "9ea60aa0-b9e0-4105-b44a-e675aaa49cb4")
 		(effects
@@ -4789,7 +4763,7 @@
 		)
 	)
 	(gr_text "SCLK"
-		(at 159.032521 94.082322 0)
+		(at 158.932521 94.082322 0)
 		(layer "B.SilkS")
 		(uuid "98157b50-e179-445d-8e37-0573845525aa")
 		(effects
@@ -4801,21 +4775,8 @@
 			(justify left bottom mirror)
 		)
 	)
-	(gr_text "WP#/IO 2"
-		(at 164.632521 88.982322 0)
-		(layer "B.SilkS")
-		(uuid "21446205-0184-4e05-946f-fec67ba22470")
-		(effects
-			(font
-				(size 1.5 1.5)
-				(thickness 0.3)
-				(bold yes)
-			)
-			(justify left bottom mirror)
-		)
-	)
-	(gr_text "HOLD#/IO 3"
-		(at 167.232521 96.682322 0)
+	(gr_text "HOLD#/SIO3"
+		(at 167.332521 96.682322 0)
 		(layer "B.SilkS")
 		(uuid "3b37fcdc-7c44-4662-b0e4-18f17847f144")
 		(effects
@@ -4825,6 +4786,45 @@
 				(bold yes)
 			)
 			(justify left bottom mirror)
+		)
+	)
+	(gr_text "MISO/SIO1"
+		(at 153.032521 86.482322 0)
+		(layer "B.SilkS")
+		(uuid "2e0663ea-cf48-4b76-91a3-bdbf555572e7")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify right bottom mirror)
+		)
+	)
+	(gr_text "WP#/SIO2"
+		(at 153.032521 88.982322 0)
+		(layer "B.SilkS")
+		(uuid "21446205-0184-4e05-946f-fec67ba22470")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify right bottom mirror)
+		)
+	)
+	(gr_text "MOSI/SIO0"
+		(at 153.032521 91.582322 0)
+		(layer "B.SilkS")
+		(uuid "d067a8ff-b70f-4341-b179-e1d860799830")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify right bottom mirror)
 		)
 	)
 	(segment
