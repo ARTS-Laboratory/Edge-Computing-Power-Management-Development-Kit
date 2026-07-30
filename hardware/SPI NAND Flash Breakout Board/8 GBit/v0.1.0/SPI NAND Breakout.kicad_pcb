@@ -4688,6 +4688,18 @@
 		(uuid "ea59617e-7282-479c-b328-a9a3fee1d7a5")
 	)
 	(gr_text "Flash: AS5F18G04SND-10LIN"
+		(at 172 99.3 0)
+		(layer "B.SilkS")
+		(uuid "95e40555-c390-4bfe-ae9c-41eb9c8002c7")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.08)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "Flash: AS5F18G04SND-10LIN"
 		(at 172 100 0)
 		(layer "B.SilkS")
 		(uuid "22477474-7937-44b1-a00a-b2ca387a1faa")
