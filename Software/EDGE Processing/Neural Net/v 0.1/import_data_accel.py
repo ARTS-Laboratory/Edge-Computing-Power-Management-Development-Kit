@@ -14,6 +14,7 @@ import glob
 import numpy as np
 import pandas as pd
 
+data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "Data"))
 
 def find_pairs(data_dir):
     patch_files = sorted(glob.glob(os.path.join(data_dir, "*_PATCH.CSV")))
@@ -142,7 +143,7 @@ def normalize_windows(windows):
     return (windows - means) / stds
 
 
-def prepare_dataset(data_dir, train_ids, validation_ids, test_ids):
+def prepare_dataset(train_ids, validation_ids, test_ids):
     pairs = find_pairs(data_dir)
 
     all_windows = []

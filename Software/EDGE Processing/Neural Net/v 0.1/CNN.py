@@ -47,7 +47,7 @@ class PPGCNN(nn.Module):
 
 def main(train_ids, validation_ids, test_ids):
 
-    X_train, y_train, X_validation, y_validation, X_test, y_test, motion_train, motion_validation, motion_test = prepare_dataset("Data", train_ids, validation_ids, test_ids, plot=False)
+    X_train, y_train, X_validation, y_validation, X_test, y_test, motion_train, motion_validation, motion_test = prepare_dataset(train_ids, validation_ids, test_ids)
 
     print("Training:", X_train.shape, y_train.shape)
     print("Testing:", X_test.shape, y_test.shape)
