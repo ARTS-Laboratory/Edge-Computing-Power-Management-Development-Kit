@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "AS5F18G04SND-10LIN") (type "KiCad") (uri "${KIPRJMOD}/AS5F18G04SND-10LIN.kicad_sym") (options "") (descr ""))
+)
