@@ -1,0 +1,30 @@
+# ==========================================
+# PATCH Neural Network - Git Ignore
+# ==========================================
+
+# Local participant split configuration
+split_config.py
+
+# Participant / research data
+Data/
+data/
+PA_Data/
+participant_data/
+
+# PATCH and Actiheart source files
+*_PATCH.CSV
+*_PATCH.csv
+*_hr.csv
+*_hr.CSV
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local Python environments
+.venv/
+venv/
+env/
+
+# Spyder
+.spyproject/
