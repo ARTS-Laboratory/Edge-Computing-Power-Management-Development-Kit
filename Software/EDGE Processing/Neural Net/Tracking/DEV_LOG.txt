@@ -1,0 +1,198 @@
+# PATCH Neural Network — Development Log
+
+Chronological record of model experiments and results.
+
+---
+
+## E001 — Dense Neural Network
+
+**Input:** PPG only  
+**Train:** 4021  
+**Test:** 4022
+
+**Architecture:** Fully connected NN.
+
+**Result:**
+- Test MAE: 13.52 BPM
+- Test RMSE: 17.30 BPM
+
+**Outcome:** Established initial neural-network baseline.
+
+---
+
+## E002 — PPG CNN
+
+**Input:** PPG only  
+**Train:** 4021  
+**Test:** 4022
+
+**Architecture:** Two Conv1D layers + dense regression.
+
+**Result:**
+- Test MAE: 12.70 BPM
+- Test RMSE: 16.59 BPM
+- Correlation: 0.727
+- Bias: +14.69 BPM
+
+**Outcome:** CNN improved over the dense NN, but showed substantial positive bias.
+
+---
+
+## E003 — Synthetic PPG Pretraining
+
+**Input:** Synthetic PPG → real PATCH PPG  
+**Pretrain:** 20,000 synthetic windows  
+**Fine-tune:** 4021  
+**Test:** 4022
+
+**Result:**
+- Train MAE: 13.18 BPM
+- Test MAE: 23.07 BPM
+- Test RMSE: 25.55 BPM
+
+**Outcome:** Synthetic pretraining reduced performance. Discontinued.
+
+---
+
+## E004 — Single-Stream PPG + Accelerometer CNN
+
+**Input:** PPG + X + Y + Z  
+**Train:** 4021  
+**Test:** 4022
+
+**Method:** All four signals treated as channels of the same CNN.
+
+**Result:**
+- Train MAE: 5.31 BPM
+- Test MAE: 15.11 BPM
+- Test RMSE: 18.11 BPM
+- Correlation: 0.766
+- Bias: +14.20 BPM
+
+**Outcome:** Improved training fit and correlation but worsened test MAE.
+
+---
+
+## E005 — Two-Branch PPG + Accelerometer CNN
+
+**Input:** Separate PPG and XYZ CNN branches  
+**Train:** 4021  
+**Test:** 4022
+
+**Single-run result:**
+- Train MAE: 4.12 BPM
+- Test MAE: 10.49 BPM
+- Test RMSE: 14.39 BPM
+- Correlation: 0.799
+- Bias: +8.66 BPM
+
+**Outcome:** Promising result prompted repeated-seed testing.
+
+---
+
+## E006 — Five-Run PPG CNN
+
+**Input:** PPG only  
+**Train:** 4021  
+**Test:** 4022  
+**Seeds:** 1–5
+
+**Result:**
+- Test MAE: 16.26 ± 2.48 BPM
+- Test RMSE: 19.53 ± 2.03 BPM
+- Correlation: 0.746 ± 0.018
+- Bias: +14.95 ± 2.96 BPM
+
+**Outcome:** Demonstrated substantial initialization variability. Single-run results were not representative enough for model comparison.
+
+---
+
+## E007 — Five-Run Two-Branch CNN
+
+**Input:** PPG + XYZ  
+**Train:** 4021  
+**Test:** 4022  
+**Seeds:** 1–5
+
+**Result:**
+- Test MAE: 15.75 ± 2.09 BPM
+- Test RMSE: 18.91 ± 2.14 BPM
+- Correlation: 0.777 ± 0.032
+- Bias: +14.71 ± 2.41 BPM
+
+**Outcome:** Small improvement over PPG-only, but additional recordings were needed to assess generalization.
+
+---
+
+## E008 — Dataset Expansion
+
+**Change:** Added 10 additional good PA recordings.
+
+**Dataset:**
+- 12 recordings
+- 49,092 valid windows before splitting
+
+**Outcome:** Enabled recording-level training, validation, and test sets.
+
+---
+
+## E009 — Multi-Recording PPG CNN
+
+**Input:** PPG only  
+**Train:** 8 recordings / 29,124 windows  
+**Validation:** 2 recordings / 9,499 windows  
+**Test:** 2 recordings / 10,469 windows  
+**Seeds:** 1–5  
+**Training:** Minibatches + validation-based early stopping
+
+**Result:**
+- Best epoch: 29.4 ± 3.4
+- Train MAE: 10.72 ± 0.85 BPM
+- Validation MAE: 16.21 ± 0.64 BPM
+- Test MAE: 14.16 ± 1.23 BPM
+- Test RMSE: 18.32 ± 1.22 BPM
+- Correlation: 0.669 ± 0.007
+- Bias: +8.90 ± 2.32 BPM
+
+**Motion MAE:**
+- Low: 12.63 ± 1.32 BPM
+- Medium: 14.53 ± 1.36 BPM
+- High: 15.31 ± 1.06 BPM
+
+**Outcome:** Larger training set reduced variability and bias. Error increased with motion level.
+
+---
+
+## E010 — Multi-Recording Two-Branch CNN
+
+**Input:** PPG + XYZ  
+**Train/Validation/Test:** Same as E009  
+**Seeds:** 1–5
+
+**Result:**
+- Train MAE: 8.31 ± 2.77 BPM
+- Validation MAE: 17.67 ± 0.77 BPM
+- Test MAE: 15.38 ± 1.09 BPM
+- Test RMSE: 19.03 ± 1.29 BPM
+- Correlation: 0.610 ± 0.032
+- Bias: +8.06 ± 2.11 BPM
+
+**Motion MAE:**
+- Low: 13.16 ± 0.85 BPM
+- Medium: 15.36 ± 1.00 BPM
+- High: 17.63 ± 1.59 BPM
+
+**Outcome:** Two-branch ACC model fit training data better but generalized worse than PPG-only. Current ACC architecture not adopted.
+
+---
+
+# Current Best Model
+
+**Model:** PPG-only CNN
+
+**Five-run test performance:**
+- MAE: 14.16 ± 1.23 BPM
+- RMSE: 18.32 ± 1.22 BPM
+- Correlation: 0.669 ± 0.007
+
+**Status:** Development baseline. Methodological choices remain under review.
