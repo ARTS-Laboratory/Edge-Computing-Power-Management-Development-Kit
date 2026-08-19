@@ -1,0 +1,168 @@
+# PATCH Neural Network — Decisions Under Review
+
+Methodological choices that require literature support, validation, or further investigation before being finalized.
+
+---
+
+## R001 — Window Duration
+
+**Current:** 15 seconds / 750 samples.
+
+**Review:** Determine an appropriate PPG window duration for HR estimation.
+
+---
+
+## R002 — Window Hop
+
+**Current:** 1 second / 50 samples.
+
+**Review:** Determine an appropriate overlap/hop between windows.
+
+---
+
+## R003 — HR Window Label
+
+**Current:** Mean valid Actiheart HR within the window.
+
+**Review:** Mean vs. median vs. other reference-label methods.
+
+---
+
+## R004 — Minimum Reference Coverage
+
+**Current:** At least 8 valid Actiheart samples per 15-second window.
+
+**Review:** Current threshold is arbitrary and requires justification.
+
+---
+
+## R005 — Low Nonzero Actiheart HR
+
+**Previous:** HR below 40 BPM was excluded.
+
+**Concern:** Low HR can be physiologically valid.
+
+**Review:** Determine reference-quality criteria without an arbitrary BPM cutoff.
+
+---
+
+## R006 — PPG Normalization
+
+**Current:** Per-window z-normalization.
+
+**Review:** Determine appropriate normalization for raw PPG.
+
+---
+
+## R007 — CNN Architecture
+
+**Current:** Two Conv1D layers followed by a dense regression layer.
+
+**Review:** Kernel sizes, filters, pooling, and model size require justification/validation.
+
+---
+
+## R008 — Training Loss
+
+**Current:** MSE.
+
+**Review:** Compare with MAE, Huber, or literature-supported alternatives.
+
+---
+
+## R009 — Optimizer / Learning Rate
+
+**Current:** Adam, LR = 0.001.
+
+**Review:** Determine appropriate optimizer and learning rate.
+
+---
+
+## R010 — Batch Size
+
+**Current:** 128.
+
+**Review:** Requires validation or justification.
+
+---
+
+## R011 — Early Stopping
+
+**Current:** Validation MAE, patience = 10.
+
+**Review:** Validate stopping criterion and patience.
+
+---
+
+## R012 — Accelerometer Integration
+
+**Current Findings:** Adding raw XYZ as direct predictive inputs reduced held-out performance in both Dense and CNN models. A separate CNN accelerometer branch improved over single-stream CNN fusion but still did not outperform PPG-only.
+
+**Review:** Investigate whether accelerometry is better used as a motion or PPG-quality indicator rather than as a direct HR-predictive input.
+---
+
+## R013 — Motion Metric
+
+**Current:** Standard deviation of XYZ acceleration magnitude.
+
+**Review:** Find a justified measure of motion intensity.
+
+---
+
+## R014 — Motion Bins
+
+**Current:** Test-set 33rd/67th percentiles.
+
+**Review:** Determine whether motion should be continuous or use justified thresholds.
+
+---
+
+## R015 — Final Dataset Split
+
+**Current:** 8 train / 2 validation / 2 test recordings.
+
+**Review:** Establish a final evaluation split after model development.
+
+---
+
+## R016 — Overlapping Window Independence
+
+**Current:** 15-second windows use a 1-second hop, producing 14 seconds of overlap.
+
+**Review:** Determine how overlapping validation/test windows should be treated when reporting statistical performance.
+
+---
+
+## R017 — Reference Rejection and Window Gaps
+
+**Current:** Windows failing reference-HR criteria are excluded.
+
+**Concern:** A short period of invalid reference data may reject multiple overlapping windows.
+
+**Review:** Determine an objective reference-quality and window-rejection method.
+
+---
+
+## R018 — Temporal Sequence Modeling
+
+**Current:** Dense and CNN models treat each 15-second window independently. Training windows are shuffled.
+
+**Review:** Determine whether HR estimation should explicitly use information from previous windows.
+
+**Candidates:** LSTM, GRU, TCN, or other sequence-aware methods.
+
+---
+
+## R019 — Embedded NN Inference Schedule
+
+**Current:** Training uses 15-second windows with a 1-second hop.
+
+**Review:** Determine the final NN processing/update schedule under PATCH memory and compute constraints.
+
+---
+
+## R020 — Neural Network Type
+
+**Current Finding:** PPG-only CNN outperformed the PPG-only Dense NN.
+
+**Review:** Determine whether CNN or another time-series architecture is most appropriate for PATCH.
