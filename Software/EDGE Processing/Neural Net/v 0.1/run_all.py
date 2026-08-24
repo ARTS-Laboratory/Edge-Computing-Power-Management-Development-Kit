@@ -7,7 +7,8 @@ Runs all neural-network experiments sequentially.
 2. Single-stream PPG + accelerometer CNN
 3. Two-branch PPG + accelerometer CNN
 """
-
+import DenseNN
+import DenseAccelNN
 import CNN
 import accelCNN
 import accelCNN_2branch
@@ -20,25 +21,27 @@ def main():
     validation_ids = split_config.validation_ids
     test_ids = split_config.test_ids
 
+    DenseNN.main(train_ids, validation_ids, test_ids)
+    DenseAccelNN.main(train_ids, validation_ids, test_ids)
     print("\n========================================")
     print("STARTING PPG-ONLY CNN")
     print("========================================")
 
-    CNN.main(train_ids, validation_ids, test_ids)
+   # CNN.main(train_ids, validation_ids, test_ids)
 
     print("\n========================================")
     print("PPG-ONLY CNN COMPLETE")
     print("STARTING SINGLE-STREAM PPG + ACCEL CNN")
     print("========================================")
 
-    accelCNN.main(train_ids, validation_ids, test_ids)
+    #accelCNN.main(train_ids, validation_ids, test_ids)
 
     print("\n========================================")
     print("SINGLE-STREAM ACCEL CNN COMPLETE")
     print("STARTING TWO-BRANCH PPG + ACCEL CNN")
     print("========================================")
 
-    accelCNN_2branch.main(train_ids, validation_ids, test_ids)
+    #accelCNN_2branch.main(train_ids, validation_ids, test_ids)
 
     print("\n========================================")
     print("ALL RUNS COMPLETE")
